@@ -1,0 +1,17 @@
+{
+  "name": "mini-error-cause-chain-walker",
+  "version": "0.1.0",
+  "description": "Collects nested ES2022 error causes into an ordered array or report string.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
