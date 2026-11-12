@@ -53,3 +53,10 @@ Returns a single string, one frame per line, formatted as `Name: message`. A fra
 Options: `maxDepth` as above, plus:
 
 - `includeStack` (boolean, default `false`): when `true`, each frame's stack is appended below it, indented by two spaces.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
